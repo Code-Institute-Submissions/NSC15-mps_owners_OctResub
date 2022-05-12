@@ -1,11 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
+class Post(models.Model):
+    title = models.CharField(max_length=300, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    car = models.CharField(max_length=200, default="Mazda")
+    text = models.TextField()
+    post_image = CloudinaryField('image', default='placeholder')
+    created_on = models.DateTimeField(auto_now_add=True)
+    
 
-class CreateUser(models.Model):
-    name = models.CharField(max_length=20, help_text='Enter your name')
-    email = models.EmailField(max_length=250)
-    password = models.CharField(max_length=20)
-    city = models.CharField(max_length=30, help_text='Enter your home town location')
 
     def __str__(self):
-        return self.name
+        return self.title
