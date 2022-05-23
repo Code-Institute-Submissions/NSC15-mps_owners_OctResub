@@ -1,0 +1,30 @@
+body {
+    background: #485563;
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    background: linear-gradient(to right, #29323c, #485563);
+
+}
+
+.navbar-container {
+    background: rgba(15, 3, 43, 0.1)
+}
+
+.logo {
+    font-family: 'Permanent Marker';
+    font-size: 6vh;
+
+}
+
+mark.white {
+    color: white;
+    background: none;
+}
+
+mark.red {
+    color: firebrick;
+    background: none
+}
+
+.stop-hover {
+    pointer-events: none;
+}
