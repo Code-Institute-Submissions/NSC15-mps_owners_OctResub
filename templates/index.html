@@ -3,6 +3,8 @@
 
 {% block content %}
 {% for post in post_list %}
-<h1>{{ post.title }}</h1>
+<h1 class="post-title">{{ post.title }}</h1>
+<p>{{ post.text }}</p>
+
 {% endfor %}
 {% endblock content %}

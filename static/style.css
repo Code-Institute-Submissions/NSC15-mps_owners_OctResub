@@ -28,3 +28,9 @@ mark.red {
 .stop-hover {
     pointer-events: none;
 }
+
+.post-title {
+    color: white;
+    font-size: 5vh;
+    text-align: center;
+}
