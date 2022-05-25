@@ -13,6 +13,7 @@ body {
     font-family: 'Permanent Marker';
     font-size: 6vh;
 
+
 }
 
 mark.white {
@@ -29,8 +30,11 @@ mark.red {
     pointer-events: none;
 }
 
-.post-title {
+.nav-link {
     color: white;
-    font-size: 5vh;
-    text-align: center;
+    font-size: 2rem;
+}
+
+.nav-right {
+    float: right !important;
 }
