@@ -4,14 +4,32 @@
 {% block content %}
 {% for post in post_list %}
 
-<div class=" col-6 card">
+<div class=" col-4 card border-dark">
+    {% if 'placeholder' in post.post_image.url %}
+    <img src="../static/automobile-1840414_1280.jpg" class="card-img-top" alt="...">
+    {% else %}
     <img src=" {{ post.post_image.url }}" class="card-img-top" alt="...">
+    {% endif %}
     <div class="card-body">
         <h5 class="card-title">{{ post.author }}</h5>
         <p class=" card-text">{{ post.text }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="{% url 'post_info' %}" class="btn btn-primary">Read More</a>
     </div>
 </div>
 
 {% endfor %}
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock content %}

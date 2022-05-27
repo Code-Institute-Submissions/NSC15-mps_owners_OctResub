@@ -10,6 +10,7 @@ class Post(models.Model):
     post_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='post_likes', blank=True)
+    slug = models.SlugField(max_length=300, unique=True, default="")
     
 
     def __str__(self):
