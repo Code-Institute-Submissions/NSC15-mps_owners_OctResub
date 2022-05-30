@@ -1,4 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>THIS IS THE POST PAGE </h1>
+{% load crispy_forms_tags %}
+
+<div class=" col-12 card border-dark">
+    {% if 'placeholder' in post.post_image.url %}
+    <img src="../static/automobile-1840414_1280.jpg" class="card-img-top" alt="...">
+    {% else %}
+    <img src=" {{ post.post_image.url }}" class="card-img-top img-detail" alt="...">
+    {% endif %}
+    <div class="card-body card-detail">
+        <h5 class="card-title">{{ post.author }}</h5>
+        <p class="card-text"> {{ post.text }}</p>
+        {% if user.is_authenticated %}
+        <form method="post">
+            {{ comment_box | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-signup btn-lg">Post</button>
+        </form>
+        {% endif %}
+        {% for comment in comments %}
+        <p>{{ comment.name.capitalize }} : <br> {{ comment.body.capitalize }}</p>
+        {% endfor %}
+    </div>
+
+</div>
+
+
 {% endblock %}

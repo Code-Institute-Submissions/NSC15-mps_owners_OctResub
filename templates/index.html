@@ -12,7 +12,6 @@
     {% endif %}
     <div class="card-body">
         <h5 class="card-title">{{ post.author }}</h5>
-        <p class=" card-text">{{ post.text }}</p>
         {% if user.is_authenticated %}
         <a href="{% url 'post_info' post.slug  %}" class="btn btn-primary">Read More</a>
         {% endif %}

@@ -67,4 +67,10 @@ mark.red {
 }
 
 
-/* Login.HTML CSS */
+.card-detail {
+    min-height: 90vh;
+}
+
+.img-detail {
+    min-height: 25rem;
+}
