@@ -9,7 +9,7 @@ class PostView(generic.ListView):
     queryset = Post.objects.all()
     template_name = 'index.html'
     paginate_by = 6
-  
+
 
 class Postinfo(View):
 
@@ -28,12 +28,11 @@ class Postinfo(View):
             }
         )
 
-    
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by("-created_on")
-        
+
         comment_box = CommentBox(data=request.POST)
         if comment_box.is_valid():
             comment_box.instance.name = request.user.username

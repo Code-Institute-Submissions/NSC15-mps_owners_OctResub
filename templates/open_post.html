@@ -31,8 +31,9 @@
         <h5>Comments: </h5>
         <div class="col-12 col-md-6 thread">
             {% for comment in comments %}
-            <p class="thread-comments">{{ comment.name.capitalize }} : {{ comment.body.capitalize }}</p>
-            {% endfor %}
+            <p class="thread-comments">{{ comment.created_on }} - {{ comment.name.capitalize}} wrote:
+                {{ comment.body.capitalize }}
+                {% endfor %}
         </div>
     </div>
 </div>

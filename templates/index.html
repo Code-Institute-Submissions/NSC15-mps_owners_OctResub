@@ -6,7 +6,7 @@
     {% for post in post_list %}
     <div class="col-12 col-md-4 card border-dark">
         {% if 'placeholder' in post.post_image.url %}
-        <img src="../static/automobile-1840414_1280.jpg" class="card-img-top" alt="...">
+        <img src="../static/automobile-1840414_1280.jpg" class="card-img-top" alt="Thread image">
         {% else %}
         <img src=" {{ post.post_image.url }}" class="card-img-top" alt="...">
         {% endif %}
@@ -14,8 +14,13 @@
             <h5 class="card-title">{{ post.title }}</h5>
             {% if user.is_authenticated %}
             <a href="{% url 'post_info' post.slug  %}" class="btn btn-primary">Read More</a>
-            {% endif %}
+            {% else %}
+            <div class="row">
+                <h4>Please login to view the forum threads in more detail and get involved in the discussion</h4>
+            </div>
         </div>
+        {% endif %}
+
     </div>
     {% endfor %}
 </div>
