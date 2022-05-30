@@ -23,7 +23,6 @@ class Postinfo(View):
             {
                 "post": post,
                 "comments": comments,
-                "commented": False,
                 "comment_box": CommentBox()
 
             }
@@ -33,7 +32,7 @@ class Postinfo(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
-        comment = post.comment.order_by("-created_on")
+        comments = post.comments.order_by("-created_on")
         
         comment_box = CommentBox(data=request.POST)
         if comment_box.is_valid():
@@ -49,7 +48,7 @@ class Postinfo(View):
             "open_post.html",
             {
                 "post": post,
-                "comment": comment,
+                "comments": comments,
                 "comment_box": comment_box,
 
             },
