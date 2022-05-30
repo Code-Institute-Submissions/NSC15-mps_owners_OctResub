@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
-
+from cloudinary.models import CloudinaryField 
+from django.urls import reverse
 class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
@@ -10,11 +10,13 @@ class Post(models.Model):
     post_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='post_likes', blank=True)
-    slug = models.SlugField(max_length=300, unique=True, default="")
+    slug = models.SlugField(max_length=300, unique=True)
     
-
     def __str__(self):
         return self.title
 
     def total_likes(self):
         return self.likes
+
+    def get_absolute_url(self):
+        return reverse("post_info", kwargs={"slug": self.slug})
