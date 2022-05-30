@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load cloudinary %}
 
 
 {% block content %}
@@ -18,8 +19,9 @@
             <div class="row">
                 <h4>Please login to view the forum threads in more detail and get involved in the discussion</h4>
             </div>
+            {% endif %}
         </div>
-        {% endif %}
+
 
     </div>
     {% endfor %}
