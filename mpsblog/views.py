@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.contrib import messages
 from .models import Post
 from .forms import CommentBox
 
@@ -39,6 +40,7 @@ class Postinfo(View):
             comment = comment_box.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(self.request, 'Your comment has been added')
         else:
             comment_box = CommentBox()
 
