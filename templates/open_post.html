@@ -33,7 +33,7 @@
         <div class="col-12 col-md-6 thread">
             {% for comment in comments %}
             <p class="thread-comments">{{ comment.created_on }} - {{ comment.name.capitalize}} wrote:
-                {{ comment.body.capitalize }}
+                {{ comment.body.capitalize }} <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
                 {% endfor %}
         </div>
     </div>

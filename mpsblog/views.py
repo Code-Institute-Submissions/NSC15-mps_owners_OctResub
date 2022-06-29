@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.contrib import messages
-from .models import Post
-from .forms import CommentBox
+from .models import Post, ThreadComment
+from .forms import CommentBox, EditComment
+from django.views.generic import UpdateView
 
 
 class PostView(generic.ListView):
@@ -54,3 +55,7 @@ class Postinfo(View):
 
             },
         )
+class UpdateComment(UpdateView):
+    model = ThreadComment
+    template_name = 'edit_comment.html'
+    form_class = CommentBox
