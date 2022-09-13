@@ -1,15 +1,12 @@
 /*BASE.HTML CSS*/
 
 body {
-    background: #485563;
-    background: -webkit-linear-gradient(to right, #29323c, #485563);
-    background: linear-gradient(to right, #29323c, #485563);
     min-height: 100vh;
 
 }
 
 .navbar-container {
-    background: rgba(15, 3, 43, 0.1)
+    background: rgb(97, 97, 97)
 }
 
 .logo {
@@ -20,7 +17,7 @@ body {
 }
 
 mark.white {
-    color: white;
+    color: #000;
     background: none;
 }
 
@@ -51,10 +48,10 @@ mark.red {
 }
 
 .page-footer {
-    height: 120px;
-    background-color: rgba(15, 3, 43, 0.1);
+    height: 5rem;
+    background: rgb(97, 97, 97);
     text-align: center;
-    color: white;
+    color: #000;
 
 }
 
