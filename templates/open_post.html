@@ -32,7 +32,8 @@
         <h5>Comments: </h5>
         <div class="col-12 col-md-6 thread">
             {% for comment in comments %}
-            <p class="thread-comments">{{ comment.created_on }} - {{ comment.name.capitalize}} wrote:
+            <p class="thread-comments"><small>{{ comment.created_on }} - {{ comment.name.capitalize}} wrote:
+                </small>
                 {{ comment.body.capitalize }}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'edit_comment' comment.pk %}">Edit</a>

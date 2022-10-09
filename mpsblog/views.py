@@ -1,12 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic.edit import UpdateView, DeleteView
 from .models import Post, ThreadComment
-from .forms import CommentBox, EditComment
-
+from .forms import CommentBox
 
 
 class PostView(generic.ListView):
@@ -47,6 +46,7 @@ class Postinfo(LoginRequiredMixin, View):
             messages.success(self.request, 'Your comment has been added')
         else:
             comment_box = CommentBox()
+            messages.error(self.request, 'Your comment couldnt be added')
 
         return render(
             request,
@@ -58,6 +58,8 @@ class Postinfo(LoginRequiredMixin, View):
 
             },
         )
+
+
 class UpdateComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = ThreadComment
     fields = ['body']
@@ -65,9 +67,11 @@ class UpdateComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_url = "/"
     success_message = "Comment successfully changed"
 
+
 class DeleteComment(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = ThreadComment
     template_name = 'delete_comment.html'
+
     def get_success_url(self):
         messages.success(self.request, "Your comment was deleted successfully")
-        return ('/')
+        return '/'

@@ -6,7 +6,8 @@ body {
 }
 
 .navbar-container {
-    background: rgb(97, 97, 97)
+    background: rgb(206, 205, 205);
+    min-height: 6rem;
 }
 
 .logo {
@@ -31,7 +32,7 @@ mark.red {
 }
 
 .nav-link {
-    color: white;
+    color: #000;
     font-size: 2rem;
 }
 
@@ -40,16 +41,18 @@ mark.red {
 }
 
 .body-content {
-    background-color: lightslategray;
+    background-color: rgb(206, 205, 205);
     min-height: 100vh;
+    border: 2px solid #000;
+    border-radius: 10px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: black;
 }
 
 .page-footer {
-    height: 5rem;
-    background: rgb(97, 97, 97);
+    height: 6rem;
+    background-color: rgb(206, 205, 205);
     text-align: center;
     color: #000;
 
