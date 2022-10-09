@@ -2,12 +2,10 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <h1> {{ comment.body }}</h1>
-<form class="comment-form" method="post">
-    {{ comment_box | crispy }}
+<form method="POST">
     {% csrf_token %}
-    <button type="submit" class="btn btn-primary btn-lg">Post</button>
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary btn-lg"></button>
 </form>
-</div>
-</div>
 
 {% endblock %}

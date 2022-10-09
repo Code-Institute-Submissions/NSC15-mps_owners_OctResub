@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form method="POST">
+    {% csrf_token %}
+    <h3 class="pt-5">Are you sure you would like to delete this comment</h2>
+        <input type="submit" value="Delete" class="btn btn-danger btn-lg"></button>
+</form>
+
+{% endblock %}

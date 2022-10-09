@@ -1,9 +1,12 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic.edit import UpdateView, DeleteView
 from .models import Post, ThreadComment
 from .forms import CommentBox, EditComment
-from django.views.generic import UpdateView
+
 
 
 class PostView(generic.ListView):
@@ -13,7 +16,7 @@ class PostView(generic.ListView):
     paginate_by = 6
 
 
-class Postinfo(View):
+class Postinfo(LoginRequiredMixin, View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
@@ -55,7 +58,16 @@ class Postinfo(View):
 
             },
         )
-class UpdateComment(UpdateView):
+class UpdateComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = ThreadComment
+    fields = ['body']
     template_name = 'edit_comment.html'
-    form_class = CommentBox
+    success_url = "/"
+    success_message = "Comment successfully changed"
+
+class DeleteComment(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
+    model = ThreadComment
+    template_name = 'delete_comment.html'
+    def get_success_url(self):
+        messages.success(self.request, "Your comment was deleted successfully")
+        return ('/')

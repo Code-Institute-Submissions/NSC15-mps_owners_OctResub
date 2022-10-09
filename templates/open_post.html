@@ -33,7 +33,11 @@
         <div class="col-12 col-md-6 thread">
             {% for comment in comments %}
             <p class="thread-comments">{{ comment.created_on }} - {{ comment.name.capitalize}} wrote:
-                {{ comment.body.capitalize }} <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                {{ comment.body.capitalize }}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                <a class="text-danger" href="{% url 'delete_comment' comment.pk %}">Delete</a>
+                {% endif %}
                 {% endfor %}
         </div>
     </div>
