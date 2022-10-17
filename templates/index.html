@@ -8,7 +8,7 @@
     {% for post in post_list %}
     <div class="col-12 col-md-4 card border-dark">
         {% if 'placeholder' in post.post_image.url %}
-        <img src=“{% static ‘automobile-1840414_1280.jpg’ %}” class=“card-img-top” alt=“Thread image”>
+        <img src="../static/automobile-1840414_1280.jpg" class="card-img-top" alt="Thread image">
         {% else %}
         <img src=" {{ post.post_image.url }}" class="card-img-top" alt="Thread Image">
         {% endif %}
