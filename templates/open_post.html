@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load crispy_forms_tags %}
-{% load cloudinary %}
+{% load static %}
 
 <div class="row justify-content-center">
     <div class="col-12 card border-dark card-detail">
         {% if 'placeholder' in post.post_image.url %}
-        <img src="../static/automobile-1840414_1280.jpg" class="card-img-top img-detail" alt="...">
+        <img src="{% static 'automobile-1840414_1280.jpg' %}" class="card-img-top" alt="Thread image">
         {% else %}
         <img src=" {{ post.post_image.url }}" class="card-img-top img-detail" alt="...">
         {% endif %}
