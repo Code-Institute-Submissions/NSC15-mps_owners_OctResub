@@ -23,11 +23,9 @@ mechanism that assessed app completion progress and also future improvements to 
 
 ### Key Project Ideas
 
-- Grey / White Colour Scheme
-- Simplistic Design
-- Bootstrap Cards and Grid layout for blog posts
-- CRUD functionality on post comments
-- Simple account control pages
+- Grey / White Colour Scheme - to create a professional look to the site with good contrast
+- Simplistic Design - to draw attention to the site content and provide easy navigation and accessibility
+- Bootstrap Cards and Grid layout for blog posts - to provide structure to content within the home page, with relatable imagery and the post title so that the user can choose which discussion they wish to get involved with.
 - Main content div central to page with margins either side
 
 ### Project Design Mockups
