@@ -47,7 +47,7 @@ mechanism that assessed app completion progress and also future improvements to 
 - Authenticated Users will be able to complete a thread creation form, which will add to the threads
 - Authenticated Users will be able to manage their own posts, whether that be edit or delete
 
-## Technologies Used 
+## Technologies Used
 
 - HTML5
 - CSS
@@ -57,7 +57,6 @@ mechanism that assessed app completion progress and also future improvements to 
 - Bootstrap
 - Django
 
-
 ## Testing
 
 - Chrome DevTools
@@ -65,7 +64,7 @@ mechanism that assessed app completion progress and also future improvements to 
 - W3C CSS Validator - No errors
 - Manual Testing completed while creating the project.
 
-### Home page Testing 
+### Home page Testing
 
 - Nav Links Functional - All Nav links working from each page, nav links display also change upon the condition of the user being a registered account holder or not.
 - Sign up - Sign up form allows users to input user name and password to create their account
@@ -81,6 +80,7 @@ mechanism that assessed app completion progress and also future improvements to 
 - Comment - Users can add comments to the discussion card, which details time and date of comment and user name. UX designed to target a chat feel with different coloured bubbles.
 
 ## Deployment
+
 ## My project deployment
 
 - This project is deployed via Heroku
@@ -90,7 +90,8 @@ mechanism that assessed app completion progress and also future improvements to 
 
 ### Deploying Via Heroku
 
-Create an env.py file, you will need the following variables for your project - 
+Create an env.py file, you will need the following variables for your project -
+
 - SECRET_KEY: (randomly generated)
 - CLOUDINARY_URL: Copy your CLOUDINARY_URL from the dashboard
 - DATABASE_URL: This is the value of DATABASE_URL in Heroku
@@ -98,16 +99,16 @@ Create an env.py file, you will need the following variables for your project -
 
 ### Deploying to Heroku
 
-To deploy to Heroku follow these steps: 
+To deploy to Heroku follow these steps:
 
-1. Locate the New button at the top right end side of the dashboard. 
-2. Click on Create new app, select your region and pick a suitable name for your project.  
+1. Locate the New button at the top right end side of the dashboard.
+2. Click on Create new app, select your region and pick a suitable name for your project.
 3. In Settings add buildpack Python.
-4. Add Database to App Resources. Go into the Resources Tab then Add-ons then search and add Heroku Postgres. 
-5. In the Settings Tab, in Config Vars, make sure you have the DATABASE_URL added with the previous step and to add the other variables: SECRET_KEY and CLOUDINARY_URL. Ensure the variables here are then matched up with the env.py 
+4. Add Database to App Resources. Go into the Resources Tab then Add-ons then search and add Heroku Postgres.
+5. In the Settings Tab, in Config Vars, make sure you have the DATABASE_URL added with the previous step and to add the other variables: SECRET_KEY and CLOUDINARY_URL. Ensure the variables here are then matched up with the env.py
 6. Select Deploy from the navigation bar
-7. Select the deployment method of Github and seach for your repository. 
-8. Proceed to link the Heroku app to the repository by clicking on connect. 
+7. Select the deployment method of Github and seach for your repository.
+8. Proceed to link the Heroku app to the repository by clicking on connect.
 9. Click on Deploy.
 
 ### Forking a Repository
@@ -128,4 +129,4 @@ To deploy to Heroku follow these steps:
 
 - Just below the repository control bar, there is a green Gitpod button.
 
-- This will then open the project in Gitpod for you (if gitpod is installed).
+- This will then open the project in Gitpod for you (if gitpod is installed)
