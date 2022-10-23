@@ -4,7 +4,7 @@
 
 [View deployed site here](https://mpsblog.herokuapp.com/)
 
-MPSOC Forum, is an online forum for Mazda MPS Owners to find out information and discuss personal owner stories. This site is for registered users only, which will then give the user access to the chat threads to engage with fellow owners to provide useful and helpful information to each other. Admin are regularly involved in introducing new chat threads to meet the needs of all users and the topics they wish to discuss.
+MPSOC Forum, is an online forum for Mazda MPS Owners to find out information and discuss personal owner stories. This site is for registered users only, which will then give the user access to the chat threads to engage with fellow owners to provide useful and helpful information to each other. Admin are regularly involved in introducing new chat threads to meet the needs of all users and the topics they wish to discuss. Admin users will also be monitoring the site to control conversation between regular uses to ensure that company policies and site policies are adhered to at all times.
 
 ## User Stories
 
