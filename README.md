@@ -1,6 +1,6 @@
 # MPSOC Forum
 
-![](static/img/homepage.webp)
+![](static/img/site.jpg)
 
 [View deployed site here](https://mpsblog.herokuapp.com/)
 
