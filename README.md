@@ -14,6 +14,30 @@ MPSOC Forum, is an online forum for Mazda MPS Owners to find out information and
 4. As a site user I want to be able to view different information topics
 5. As a site user I want to be able to add comments and read other peoples comments
 
+## Agile Tools
+
+I have used the Github projects kanban style board within this project to really identify and structure each process within the app build, this allowed me to establish a control
+mechanism that assessed app completion progress and also future improvements to work on to bring the project on to the next level. It is important to use tools such as this, especially within real life industry when there is more than one person working on the same project so that people are all working on different parts of the development to piece together for the finished goal of a tried and tested successful application.
+
+## Project Planning
+
+### Key Project Ideas
+
+- Grey / White Colour Scheme
+- Simplistic Design
+- Bootstrap Cards and Grid layout for blog posts
+- CRUD functionality on post comments
+- Simple account control pages
+- Main content div central to page with margins either side
+
+### Project Design Mockups
+
+- I used pen and paper to map out the design of my websites, i used this to plan the overall structure of how the site will look, I had an idea on my desired colour schemes which is evident in the designs, however i knew that i would be able to adjust this as i saw fit throughout the progression of the site. Personally, within project development i struggle to fully plan colour schemes and aesthetically pleasing components at the initial outset, i feel alot more comfortable with the development and would, in a perfect world, like to work from a plan already drawn out for me. However, for the purposes of this project and the course criteria, this is the general plan i came up with before diving into the coding!
+
+- [Home page](static/img/home_page.jpg)
+- [Blog Post Page](static/img/open_post.jpg)
+- [Account Control Page](static/img/account_page.jpg)
+
 ## Features
 
 - Non-Authenticated Users will have preview of the subject threads and related images, however will be advised to create an account.
